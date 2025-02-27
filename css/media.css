@@ -1,0 +1,88 @@
+@media screen and (max-width: 480px) {
+    /* Styles pour les mobiles */
+    body{
+        background-color: black;
+     }
+     #sigma{
+        display: none;
+     }
+     header ul{
+         flex-direction: column;
+     }
+     header ul li{
+         margin: 10px;
+     }
+     #contenuBandeau h1 {
+         font-size: xxx-large;
+     }
+     #accueil {
+         height: 100%;
+     }
+     footer {
+         justify-content: space-around;
+         border-top-left-radius: 10px;
+         border-top-right-radius: 10px;
+     }
+     footer img {
+         width: 30%;
+     }
+     #choixBouton {
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+     }
+     #choixBouton #aPropos,
+     #choixBouton #notreEquipe{
+         width: 70%;
+     }
+     #choixBouton #notreEquipe{
+         margin-bottom: 100px
+     }
+     #contenuAPropos{
+        border-radius: 10px;
+    }
+    .gauche,
+    .droite{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* Styles pour les tablettes */
+    #contenuBandeau h1 {
+        font-size: unset;
+    }
+    #accueil {
+        height: 100%;
+    }
+    #sigma{
+        display: none;
+     }
+    footer {
+        justify-content: space-around;
+    }
+    footer img {
+        width: 20%;
+    }
+    #choixBouton {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #choixBouton #aPropos,
+    #choixBouton #notreEquipe{
+        width: 70%;
+    }
+    #contenuAPropos{
+        border-radius: 10px;
+    }
+    .gauche,
+    .droite{
+        text-align: center;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    /* Styles pour les ordinateurs portables */
+
+} 
