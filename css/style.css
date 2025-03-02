@@ -611,13 +611,15 @@ font-size: large;
 font-family: 'Eduroam';
 }
 .millieu{
-text-align: center;
+    text-align: center;
 }
 .droite{
-text-align: right;
+  margin-right: 5%;
+  text-align: right;
 }
 .gauche{
-text-align: left;
+  margin-left: 5%;
+  text-align: left;
 }
 
 .shadow__btn {
@@ -833,23 +835,24 @@ input:nth-of-type(11):checked ~ main#carousel {
 }
 
 #contenuAPropos{
-margin: 5%;
-border: solid 5px #C68D6A;
-border-radius: 50% 20% / 5% 20%;
-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#contenuAPropos p,
-#contenuAPropos h1{
-margin-bottom: 40px ;
+#contenuAPropos h1,
+#contenuAPropos p {
+
+  margin-top: 20px;
+
 }
 
-#contenuAPropos h1{
-text-align: center;
-text-decoration: underline;
-}
 
 .card {
+  margin: 5%;
+  border: solid 5px #C68D6A;
+  border-radius: 50% 20% / 5% 20%;
   width: 90%;
   background-color: #4158D0;
   background-image: linear-gradient(43deg, #e19863 0%, #eba776 46%, #FBBF94 100%);
