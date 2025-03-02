@@ -542,7 +542,7 @@
           let url = data.insta.url + data.insta.username;
           await intaInfos(url);
         } catch (error) {
-          console.error("Erreur lors du fetch :", error);
+          console.error("Erreur lors du fetch de config.json :", error);
         }
       };
 
@@ -550,13 +550,15 @@
         try {
           const response = await fetch(url);
           if (!response.ok) {
-            throw new Error("Failed to fetch config.json");
+            throw new Error("Failed to fetch Instagram data");
           }
           const data = await response.json();
-          let url = data.insta.url + data.insta.username;
-          intaInfos(url);
+          console.log(data);
         } catch (error) {
-          console.error("Erreur lors du fetch :", error);
+          console.error(
+            "Erreur lors du fetch des informations Instagram :",
+            error
+          );
         }
       };
 
