@@ -540,43 +540,24 @@
           }
           const data = await response.json();
           let url = data.insta.url + data.insta.username;
-          intaInfos(url);
+          await intaInfos(url);
         } catch (error) {
           console.error("Erreur lors du fetch :", error);
         }
       };
 
-      const intaInfos = (url) => {
-        const xhr = new XMLHttpRequest();
-        xhr.open("GET", url, false);
-        xhr.setRequestHeader("Accept", "application/json");
-        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-        xhr.setRequestHeader(
-          "Access-Control-Allow-Methods",
-          "POST, GET, OPTIONS, PUT, DELETE"
-        );
-        xhr.setRequestHeader(
-          "Access-Control-Allow-Headers",
-          "Origin, Content-Type, Accept, Authorization, X-Request-With"
-        );
-
-        xhr.onload = function () {
-          if (xhr.status >= 200 && xhr.status < 300) {
-            console.log(xhr.responseText);
-          } else {
-            console.error(
-              "Erreur lors de la requête",
-              xhr.status,
-              xhr.statusText
-            );
+      const intaInfos = async (url) => {
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error("Failed to fetch config.json");
           }
-        };
-
-        xhr.onerror = function () {
-          console.error("Erreur réseau");
-        };
-
-        xhr.send();
+          const data = await response.json();
+          let url = data.insta.url + data.insta.username;
+          intaInfos(url);
+        } catch (error) {
+          console.error("Erreur lors du fetch :", error);
+        }
       };
 
       config();
