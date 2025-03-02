@@ -7,14 +7,13 @@
     <meta name="description" content="Bienvenue sur le site officielle du BDE Edurhum du BUT informatique de L'IUT A de Lille. Venez nous découvrire et surtout n'oubliez pas VOTEZ EDURHUM !!!!!!"/>
     <meta name="keywords" content="BDE, bde, edurhum, eduroam, univ-lille, iut a, IUT A, but info, BUT informatique, Jean Carle">
     <meta name="author" content="Hugo Straseele">
-    
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="icon" type="image/svg+xml" href="./public/Logo_Eduroam.png" />
   
     <title>Edurhum</title>
     
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/media.css">
-    
   </head>
   <body>
     <div id="accueil">
@@ -283,17 +282,18 @@
           <p class="modalTextParagraphe">Voici notre équipe composée des étudiants les plus drôles et les plus investis que cette université puisse compter.</p>
         </div>
         <div class="carrousselNE">
-          <input type="radio" name="position" checked />
-          <input type="radio" name="position" />
-          <input type="radio" name="position" />
-          <input type="radio" name="position" />
-          <input type="radio" name="position" />
-          <input type="radio" name="position" />
-          <input type="radio" name="position" />
-          <input type="radio" name="position" />
-          <input type="radio" name="position" />
-          <input type="radio" name="position" />
-          <input type="radio" name="position" />
+          <input type="radio" hidden name="position" checked />
+          <input type="radio" hidden name="position" />
+          <input type="radio" hidden name="position" />
+          <input type="radio" hidden name="position" />
+          <input type="radio" hidden name="position" />
+          <input type="radio" hidden name="position" />
+          <input type="radio" hidden name="position" />
+          <input type="radio" hidden name="position" />
+          <input type="radio" hidden name="position" />
+          <input type="radio" hidden name="position" />
+          <input type="radio" hidden name="position" />
+
           <main id="carousel">
             <div class="item">
               <h1>Ensoho</h1>
@@ -351,6 +351,17 @@
               <p>Pôle Emplois</p>
             </div>
           </main>
+
+          <div class="flex w-full items-center justify-center mb-2" style="margin-bottom: 10px;">
+            <div class="bg-white h-5 w-100 rounded-lg">
+              <div id="loader" class="bg-green-500 h-full index-10 rounded-lg"></div>
+            </div>
+          </div>
+          <div class="flex w-full items-center justify-center space-x-2">
+            
+            <img class=" rounded shadow-md shadow-black hover:outline outline-accent outline-xl w-10" style="margin-right: 100px;" onclick="backTeam()" src="./img/back.svg">
+            <img class="rounded shadow-md shadow-black hover:outline outline-accent outline-xl w-10 m-100" style="margin-left: 100px;" onclick="switchTeam()" src="./img/next.svg">
+          </div>
           
         </div>
         <div class="modalBtn" id="goHomeNE">
@@ -404,6 +415,11 @@
       </div>
     </div>
 </div>  
+
   <script src="./JS/script.js"></script>
+  <script src="./JS/carro.js"></script>
+  <script>
+    switchTeam()
+  </script>
   </body>
 </html>
