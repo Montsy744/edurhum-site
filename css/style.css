@@ -745,7 +745,9 @@ background-repeat: no-repeat;
 }
 .item:nth-of-type(10) {
 --offset: 10;
-background-color: #70ff94;
+background: url('./../public/photoEquipe/ilies.jpg');
+background-size: 100% auto;
+background-repeat: no-repeat;
 }
 .item:nth-of-type(11) {
   --offset: 11;
