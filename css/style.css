@@ -721,7 +721,9 @@ background-repeat: no-repeat;
 }
 .item:nth-of-type(5) {
 --offset: 5;
-background-color: #e9ff70;
+background: url('./../public/photoEquipe/matheo.png');
+background-size: 100% auto;
+background-repeat: no-repeat;
 }
 .item:nth-of-type(6) {
 --offset: 6;
