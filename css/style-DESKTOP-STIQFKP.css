@@ -743,9 +743,7 @@ main#carousel {
 }
 .item:nth-of-type(10) {
   --offset: 10;
-  background: url("./../public/photoEquipe/Louis.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  background-color: #70ff94;
 }
 
 input:nth-of-type(1) {
