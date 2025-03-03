@@ -4,7 +4,7 @@ function switchTeam() {
 
   const inputs = document.querySelectorAll(".carrousselNE input");
 
-  if (value >= inputs.length) {
+  if (value >= inputs.length - 1) {
     value = 0;
   }
 
@@ -28,5 +28,7 @@ function backTeam() {
 }
 
 function launchload() {
-  document.getElementById("loader").style.width = (value / 10) * 100 + "%";
+  const inputs = document.querySelectorAll(".carrousselNE input");
+  document.getElementById("loader").style.width =
+    (value / (inputs.length - 1)) * 100 + "%";
 }
