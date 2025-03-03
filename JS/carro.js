@@ -4,7 +4,7 @@ function switchTeam() {
 
   const inputs = document.querySelectorAll(".carrousselNE input");
 
-  if (value >= inputs.length - 1) {
+  if (value >= inputs.length) {
     value = 0;
   }
 
